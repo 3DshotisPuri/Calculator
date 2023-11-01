@@ -39,9 +39,8 @@ const Operations = () => {
   const [operator, setOperator] = useState();
   const [allMods, setAllMods] = useState(initialMod);
 
-  console.log(allMods.negate);
-  console.log(firstNumber);
-  console.log(operator);
+  console.log(result);
+  console.log(allMods);
 
   const numberHandler = (number) => {
     if (input.length === 17) {
@@ -224,10 +223,9 @@ const Operations = () => {
         }
         break;
       case "1/x":
-        if (input===initialData) {
-          return
-        }
-        else if (operator === undefined) {
+        if (input === initialData) {
+          return;
+        } else if (operator === undefined) {
           setInput(String(1 / input));
           setFirstNumber(String(1 / input));
           setAllMods((prevState) => {

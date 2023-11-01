@@ -29,7 +29,7 @@ const History = (props) => {
   return (
     <div
       className={classes.conteiner}
-      style={{ background: !props.darkMode && "rgba(255, 255, 255, 0.150)" }}
+      style={{ background: !props.darkMode && "rgba(255, 255, 255, 0.150)"}}
     >
       <div className={classes.tab}>
         {historyData.map((data, index) => {
