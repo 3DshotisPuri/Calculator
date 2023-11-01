@@ -15,6 +15,10 @@ const OperationButtons = (props) => {
     props.onCalculate(o);
   };
 
+  const dotHandler = (d) => {
+    props.onDot(d);
+  };
+
   const sliceHandler = () => {
     props.onDelete();
   };
@@ -227,7 +231,7 @@ const OperationButtons = (props) => {
         type="button"
         darkMod={props.toggle}
         onClick={() => {
-          numberHandler(".");
+          dotHandler(".");
         }}
       >
         .

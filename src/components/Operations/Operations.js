@@ -22,6 +22,7 @@ const initialMod = {
   dataSwitch: { firstSwitch: true, secondSwitch: true },
   deleteDigit: "",
   negate: true,
+  dot: true,
 };
 const formatter = new Intl.NumberFormat({
   minimumFractionDigits: 2,
@@ -595,6 +596,18 @@ const Operations = () => {
     setInput("0");
   }
 
+  const dotHandler = (dot) => {
+    // setAllMods((prevState) => {
+    //   return { ...prevState, dot: false };
+    // });
+    // if (allMods.dot === true) {
+    // }
+    setInput(prevState=> prevState+dot);
+  };
+
+  console.log(allMods.dot)
+  console.log(input)
+
   const historyHandler = (e) => {
     e.preventDefault();
     setAllMods((prevState) => {
@@ -668,6 +681,7 @@ const Operations = () => {
             onNumber={numberHandler}
             onCalculate={calculateHandler}
             onDelete={deleteHandler}
+            onDot={dotHandler}
             onNegative={negativeHandler}
             onSubmit={submitHandler}
           />
