@@ -1,0 +1,77 @@
+.conteiner {
+  background-color: white;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 90%;
+  padding-block: 10px;
+  padding-inline: 5px;
+  overflow: auto;
+  margin-inline-end: 5px;
+}
+
+.tab::-webkit-scrollbar {
+  width: 3px;
+}
+
+.tab::-webkit-scrollbar-track {
+  box-shadow: transparent;
+  border-radius: 10px;
+}
+
+.tab::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+.tab::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+ul:hover {
+  display: flex;
+  inline-size: 100%;
+  padding-block: 10px;
+  background-color: rgba(0, 0, 0, 0.068);
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.5s;
+}
+ul:active {
+  font-size: 15px;
+}
+
+li {
+  list-style: none;
+}
+
+h5 {
+  margin-block-start: 0;
+  padding-block-start: 10px;
+  padding-inline: 10px;
+  text-align: left;
+  font-weight: 100;
+}
+
+.button {
+  margin-inline-start: 300px;
+  margin-block: 6px;
+  padding-inline: 0;
+  padding-block: 0;
+  width: 7%;
+  background: transparent;
+}
+
+.result {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+span {
+  font-weight: bold;
+}

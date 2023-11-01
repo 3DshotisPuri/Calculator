@@ -1,0 +1,58 @@
+.oper-btns {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-items: center;
+  grid-gap: 3px;
+  margin-block: 1px;
+  margin-inline: 4px;
+}
+
+.sub-btn {
+  color: white;
+  background-color: #0a6ebd;
+}
+
+.sub-btn:hover {
+  background-color: rgba(0, 174, 255, 0.781);
+}
+
+.sub-btn:active {
+  background-color: rgb(0, 174, 255);
+}
+
+.oper-btn {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.685);
+}
+
+.oper-btn:hover {
+  background-color: rgba(255, 255, 255, 0.829);
+}
+
+.oper-btn:active {
+  background-color: rgba(255, 255, 255, 0.945);
+}
+
+.sub-btn-dark {
+  color: black;
+  background-color: #98e4ff9f;
+}
+
+.sub-btn-dark:hover {
+  background-color: #98e4ffde
+}
+
+.sub-btn-dark:active {
+  background-color: #98e4ff9f
+}
+
+.oper-btn-dark {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.080);
+}
+.oper-btn-dark:hover {
+background-color: rgba(255, 255, 255, 0.100);
+}
+.oper-btn-dark:active {
+  background-color: rgba(255, 255, 255, 0.080);
+}

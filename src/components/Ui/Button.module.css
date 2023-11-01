@@ -1,0 +1,37 @@
+.btn {
+  font-size: 18px;
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: white;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.685);
+}
+
+.btn:active {
+  background-color: rgba(255, 255, 255, 0.863);
+}
+
+.btn-dark {
+  color: white;
+  font-size: 18px;
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.150);
+}
+
+.btn-dark:hover {
+  background-color: rgba(255, 255, 255, 0.100);
+}
+
+.btn-dark:active {
+  background-color: rgba(255, 255, 255, 0.150);
+}
+

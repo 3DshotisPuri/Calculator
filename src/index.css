@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  
+}
+
+body {
+  text-align: center;
+  background-color: rgba(24, 44, 44, 0.778);
+}
+
+
