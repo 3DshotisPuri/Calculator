@@ -1,17 +1,17 @@
 form {
   display: grid;
   margin-block: 100px;
-  margin-inline: 770px;
+  margin-inline: 740px;
   grid-template-columns: auto;
-  grid-template-rows: 220px 390px;
+  grid-template-rows: 280px 60px 500px;
   background-color: #dbdbdb;
   border-radius: 5px;
 }
 
 .backdrop {
   position: absolute;
-  height: 200px;
-  width: 350px;
+  height: 280px;
+  width: 405px;
   background-color: transparent;
 }
 
@@ -24,8 +24,15 @@ form {
   margin-inline-end: 5px;
 }
 
+.M-buttons {
+  display: flex;
+  justify-content: center;
+  grid-row: 2;
+}
+
 .box {
   height: 100%;
+  grid-row: 3;
 }
 .title {
   display: flex;
@@ -51,7 +58,7 @@ img {
 }
 h1 {
   margin-block-start: 5px;
-  font-size: 45px;
+  font-size: 60px;
   color: black;
 }
 .h1-dark {
@@ -63,7 +70,7 @@ h3 {
   font-weight: 100;
   margin-block-end: 5px;
   margin-inline-start: auto;
-  font-size: 13px;
+  font-size: 17px;
 }
 
 .h3-dark {

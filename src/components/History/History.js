@@ -41,7 +41,7 @@ const History = (props) => {
                 selectHandler(e, data);
               }}
             >
-              <li>
+              <li className={classes.result}>
                 {data.firstNumber}
                 {data.operator}
                 {data.secondNumber}

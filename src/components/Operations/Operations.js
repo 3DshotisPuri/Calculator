@@ -2,6 +2,7 @@ import { useState } from "react";
 import Buttons from "../Buttons/Buttons";
 import classes from "./Operations.module.css";
 import Button from "../Ui/Button";
+import MemoryButtons from "../Buttons/MemoryButtons";
 import Calculator from "../../calculator.png";
 import NightlightRoundIcon from "@mui/icons-material/NightlightRound";
 import HistoryIcon from "@mui/icons-material/History";
@@ -39,9 +40,11 @@ const Operations = () => {
   const [allMods, setAllMods] = useState(initialMod);
 
   console.log(allMods.negate);
+  console.log(firstNumber);
+  console.log(operator);
 
   const numberHandler = (number) => {
-    if (input.length === 14) {
+    if (input.length === 17) {
       alert("You can't type more then 17's digits");
       return;
     }
@@ -221,7 +224,10 @@ const Operations = () => {
         }
         break;
       case "1/x":
-        if (operator === undefined) {
+        if (input===initialData) {
+          return
+        }
+        else if (operator === undefined) {
           setInput(String(1 / input));
           setFirstNumber(String(1 / input));
           setAllMods((prevState) => {
@@ -295,7 +301,28 @@ const Operations = () => {
         }
         break;
       case "√x":
-        if (operator === undefined) {
+        if (result.submit === "=") {
+          setInput(String(Math.sqrt(input)));
+          setFirstNumber(String(Math.sqrt(input)));
+          setOperator();
+          setResult({
+            firstNumber: `√(${input})`,
+            secondNumber: "",
+            operator: "",
+            submit: "",
+          });
+          setAllMods((prevState) => {
+            return {
+              ...prevState,
+              inputChange: false,
+              deleteDigit: true,
+              dataSwitch: {
+                firstSwitch: false,
+                secondSwitch: true,
+              },
+            };
+          });
+        } else if (operator === undefined) {
           setInput(String(Math.sqrt(input)));
           setFirstNumber(String(Math.sqrt(input)));
           setResult((prevState) => {
@@ -597,16 +624,11 @@ const Operations = () => {
   }
 
   const dotHandler = (dot) => {
-    // setAllMods((prevState) => {
-    //   return { ...prevState, dot: false };
-    // });
-    // if (allMods.dot === true) {
-    // }
-    setInput(prevState=> prevState+dot);
+    if (input.includes(dot)) {
+      return;
+    }
+    setInput(input + dot);
   };
-
-  console.log(allMods.dot)
-  console.log(input)
 
   const historyHandler = (e) => {
     e.preventDefault();
@@ -618,7 +640,7 @@ const Operations = () => {
   let size = "";
 
   if (input.length <= 10) {
-    size = "45px";
+    size = "60px";
   } else {
     size = "35px";
   }
@@ -666,6 +688,9 @@ const Operations = () => {
             {formatter.format(input)}
           </h1>
         </div>
+      </div>
+      <div className={classes["M-buttons"]}>
+        <MemoryButtons />
       </div>
       <div className={classes.box}>
         {allMods.historyTab ? (

@@ -1,0 +1,17 @@
+.m-buttons {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.m-btn {
+  color: black;
+  font-weight: 300;
+  border: none;
+  background: transparent;
+}
+
+.span {
+  display: flex;
+  font-weight: 100;
+}
