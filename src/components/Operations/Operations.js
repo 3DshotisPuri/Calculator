@@ -106,6 +106,8 @@ const Operations = () => {
       setSecondNumber((prevState) => {
         if (prevState === "0") {
           return number;
+        } else if (prevState.includes(".")) {
+          return prevState + number;
         } else if (prevState === firstNumber) {
           return +number;
         } else {
@@ -1191,7 +1193,6 @@ const Operations = () => {
       return {
         ...prevState,
         negate: !prevState.negate,
-        inputChange: true,
       };
     });
     if (input === initialData || secondNumber === initialData) {
@@ -1380,7 +1381,12 @@ const Operations = () => {
       setSecondNumber("0" + dot);
       setInput("0" + dot);
       setAllMods((prevState) => {
-        return { ...prevState, negate: true, switchInput: true };
+        return {
+          ...prevState,
+          negate: true,
+          switchInput: true,
+          inputChange: true,
+        };
       });
     } else if (allMods.resetNagate === false) {
       setSecondNumber(initialData);
@@ -1400,6 +1406,12 @@ const Operations = () => {
       }
       setInput(input + dot);
       setSecondNumber(input + dot);
+      setAllMods((prevState) => {
+        return {
+          ...prevState,
+          inputChange: true,
+        };
+      });
     }
   };
 
