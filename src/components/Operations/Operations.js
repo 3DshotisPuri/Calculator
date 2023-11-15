@@ -1188,7 +1188,11 @@ const Operations = () => {
 
   const negativeHandler = (t) => {
     setAllMods((prevState) => {
-      return { ...prevState, negate: !prevState.negate };
+      return {
+        ...prevState,
+        negate: !prevState.negate,
+        inputChange: true,
+      };
     });
     if (input === initialData || secondNumber === initialData) {
       return;
@@ -1376,7 +1380,7 @@ const Operations = () => {
       setSecondNumber("0" + dot);
       setInput("0" + dot);
       setAllMods((prevState) => {
-        return { ...prevState, negate: true, inputChange: true };
+        return { ...prevState, negate: true, switchInput: true };
       });
     } else if (allMods.resetNagate === false) {
       setSecondNumber(initialData);
