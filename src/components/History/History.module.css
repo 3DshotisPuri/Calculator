@@ -78,6 +78,58 @@ h5 {
   font-size: 17px;
 }
 
+.memory-div {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-block-start: 10px;
+}
+
+.memory-div:hover {
+  background-color: rgba(0, 0, 0, 0.068);
+}
+
+.button-pos {
+  display: flex;
+  height: 30px;
+  padding: 0px;
+  margin-inline-end: 5px;
+  margin-block-end: 5px;
+}
+
+.m-btn {
+  color: black;
+  background-color: rgb(255, 255, 255);
+  margin: 1px;
+  height: 40%;
+  width: 40%;
+  padding: 15px;
+  font-size: 14px;
+}
+.m-btn:hover {
+  background-color: rgba(255, 255, 255, 0.685);
+}
+
+.m-btn:active {
+  background-color: rgba(255, 255, 255, 0.863);
+}
+
+.m-btn-dark {
+  color: white;
+  margin: 2px;
+  height: 40%;
+  width: 40%;
+  padding: 15px;
+  font-size: 14px;
+}
+.m-btn-dark:hover {
+  background-color: rgba(255, 255, 255, 0.201);
+}
+
+.m-btn-dark:active {
+  background-color: rgba(255, 255, 255, 0.146);
+}
+
 .button {
   margin-inline-start: 360px;
   margin-block: 6px;
@@ -89,6 +141,19 @@ h5 {
 
 .result {
   font-size: 20px;
+}
+
+.result2 {
+  margin-block: 1px;
+  margin-inline: 0px;
+  font-size: 25px;
+}
+
+.data {
+  display: flex;
+  justify-content: flex-end;
+  margin-inline-end: 5px;
+  
 }
 
 span {

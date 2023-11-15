@@ -1,6 +1,6 @@
 .m-buttons {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(6,auto);
   height: 100%;
 }
 
@@ -11,7 +11,23 @@
   background: transparent;
 }
 
+.m-btn-dark {
+  color: white;
+}
+
 .span {
   display: flex;
   font-weight: 100;
+}
+
+
+.m-btn2 {
+  font-size: 18px;
+  margin-inline: 20px;
+  margin-block: 20px;
+  color: rgba(0, 0, 0, 0.500);
+}
+
+.m-btn2-dark {
+  color: rgba(255, 255, 255, 0.456);
 }

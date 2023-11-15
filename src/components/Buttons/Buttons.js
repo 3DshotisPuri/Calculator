@@ -2,10 +2,7 @@ import Button from "../Ui/Button";
 import classes from "./Buttons.module.css";
 
 const OperationButtons = (props) => {
-  const submitHandler = () => {
-    props.onSubmit();
-  };
-
+  
   const numberHandler = (n) => {
     props.onNumber(String(n));
   };
@@ -236,7 +233,7 @@ const OperationButtons = (props) => {
         .
       </Button>
       <Button
-        onClick={submitHandler}
+        onClick={()=> operatorHendler("=")}
         type="button"
         className={`${classes["sub-btn"]} ${
           !props.toggle && classes["sub-btn-dark"]
