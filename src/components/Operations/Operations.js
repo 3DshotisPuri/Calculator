@@ -97,8 +97,6 @@ const Operations = () => {
       setInput((prevNum) => {
         if (prevNum === "0") {
           return number;
-        } else if (prevNum.includes(".")) {
-          return prevNum + number;
         } else {
           return prevNum + number;
         }
@@ -106,8 +104,6 @@ const Operations = () => {
       setSecondNumber((prevState) => {
         if (prevState === "0") {
           return number;
-        } else if (prevState.includes(".")) {
-          return prevState + number;
         } else if (prevState === firstNumber) {
           return +number;
         } else {
