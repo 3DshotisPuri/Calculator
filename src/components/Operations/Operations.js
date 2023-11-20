@@ -41,7 +41,7 @@ const Operations = () => {
   const [handler, setHandler] = useState(true);
 
   const numberHandler = (number) => {
-    if (input.length === 20) {
+    if (input.length === 18) {
       alert("You can't type more then 20's digits");
       return;
     }
@@ -1423,7 +1423,7 @@ const Operations = () => {
   if (input.length <= 10) {
     size = "60px";
   } else {
-    size = "30px";
+    size = "40px";
   }
 
   return (
